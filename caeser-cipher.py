@@ -38,3 +38,18 @@ def decrypt(key, message):
             result = result + get_cipherletter(new_key, letter)
 
     return result
+
+operation = input("Enter 'e' to encrypt a message and 'd' to decrypt a message: ")
+
+if (operation == 'e'):
+    message = input("Enter the message to encrypt: ")
+    key = int(input("Enter the shift value: "))
+    print ("Text  : " + message )
+    print ("Shift : " + str(key) )
+    print("Cipher: " + encrypt(key, message))
+else :
+    message = input("Enter the message to decrypt: ")
+    key = int(input("Enter the shift value: "))
+    print ("Text  : " + message )
+    print ("Shift : " + str(key) )
+    print("Cipher: " + decrypt(key, message))
